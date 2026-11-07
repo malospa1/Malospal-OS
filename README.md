@@ -21,6 +21,13 @@
 USB-драйвер поддерживает ограниченный набор клавиатур; подробности —
 в [описании USB](docs/usb-keyboard.md).
 
+## Игры
+
+| Snake | Slots |
+| --- | --- |
+| ![Змейка в Malospal OS](docs/images/snake.png) | ![Слот-машина в Malospal OS](docs/images/slots.png) |
+| Запуск: `snake`. [Управление](docs/game.md) | Запуск: `slots`. [Управление](docs/slots.md) |
+
 ## Как запустить
 
 В [выпуске v0.1.0](https://github.com/malospa1/Malospal-OS/releases/tag/v0.1.0)
