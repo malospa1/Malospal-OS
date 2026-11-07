@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.png binary
+*.xz binary
+*.iso binary
+*.elf binary
+*.zip binary
+kernel/vendor/** -whitespace

@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+
+. /etc/os-release
+printf '%s\n' "$PRETTY_NAME"
+printf 'Kernel: %s\n' "$(uname -r)"
+printf 'Architecture: %s\n' "$(uname -m)"
+printf 'Hostname: %s\n' "$(hostname)"
+awk '/^MemTotal:/ { printf "Memory: %s KiB\n", $2 }' /proc/meminfo

@@ -1,0 +1,3 @@
+menu "MyOS packages"
+source "$BR2_EXTERNAL_MYOS_PATH/package/myos-base/Config.in"
+endmenu

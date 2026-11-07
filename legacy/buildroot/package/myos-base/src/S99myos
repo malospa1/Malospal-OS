@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+
+case "${1:-}" in
+    start)
+        /usr/bin/myos-info
+        printf 'MYOS_BOOT_OK\n'
+        # Only the test runner requests an automatic shutdown.
+        if grep -qw 'myos.smoke=1' /proc/cmdline; then
+            test -d /sys/class
+            test -c /dev/console
+            printf 'MYOS_SMOKE_OK\n'
+            poweroff
+        fi
+        ;;
+    stop) ;;
+    restart) "$0" stop; "$0" start ;;
+    *) printf 'Usage: %s {start|stop|restart}\n' "$0" >&2; exit 1 ;;
+esac

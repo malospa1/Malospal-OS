@@ -1,0 +1,100 @@
+Malospal OS 0.1.0
+Author: malospal
+Command: python kernel/tools/build.py check
+Environment: Windows, Python 3.12, Zig 0.15.2, QEMU 11.1.0
+
+PASS: PMM host basic
+PASS: PMM host sparse
+PASS: PMM host unaligned
+PASS: PMM host metadata
+PASS: PMM host invalid
+PASS: PMM host fragmented
+PASS: PMM host mixed
+PASS: 7 PMM host test groups.
+PASS: PIC initialization, masks/cascade, spurious IRQs and EOI order.
+PASS: Console line editing, CR/LF, bounds, invalid input and recovery.
+PASS: UART probe, bounded startup drain, IRQ/timeout, ring wrap, loss/errors, IF and stuck-device bound.
+PASS: screen 24-bit RGB, pitch/guards, glyphs, scroll, clipped graphics, console restore, IF and validation.
+PASS: screen 32-bit RGB, pitch/guards, glyphs, scroll, clipped graphics, console restore, IF and validation.
+PASS: PS/2 set 2, US keys, modifiers, repeats, E0/E1, malformed sequences and fuzz.
+PASS: USB HID press/release, repeat, modifiers, rollover recovery and bounded descriptor parser.
+PASS: keyboard delayed I/O, resend, set 2, IRQ1, ring wrap/loss, AUX/errors, IF and stuck-device bound.
+PASS: keyboard host absent failure is bounded, IRQ1 masked.
+PASS: keyboard host busy failure is bounded, IRQ1 masked.
+PASS: keyboard host selftest failure is bounded, IRQ1 masked.
+PASS: keyboard host interface failure is bounded, IRQ1 masked.
+PASS: keyboard host ack failure is bounded, IRQ1 masked.
+PASS: keyboard host resend failure is bounded, IRQ1 masked.
+PASS: keyboard host scanset failure is bounded, IRQ1 masked.
+PASS: keyboard host config failure is bounded, IRQ1 masked.
+PASS: keyboard host timeout failure is bounded, IRQ1 masked.
+PASS: keyboard host parity failure is bounded, IRQ1 masked.
+PASS: keyboard delayed I/O, resend, set 2, IRQ1, ring wrap/loss, AUX/errors, IF and stuck-device bound.
+PASS: keyboard delayed I/O, resend, set 2, IRQ1, ring wrap/loss, AUX/errors, IF and stuck-device bound.
+PASS: keyboard host ec-timeout failure is bounded, IRQ1 masked.
+PASS: Snake packed cells, reversal, growth, wrapping, tail entry, collision, full board and 100000 steps.
+PASS: PCG reference vector, all 216 combinations, staged stops, busy guard, one award, wrap/caps and 100000 spins.
+PASS: test kernel, BIOS, 64 MiB. Log: .\kernel\build\smoke\boot-bios-64.log
+PASS: test kernel, UEFI, 256 MiB. Log: .\kernel\build\smoke\boot-uefi-256.log
+PASS: normal kernel, BIOS, 128 MiB. Log: .\kernel\build\normal\boot-bios-128.log
+PASS: normal kernel, UEFI, 256 MiB. Log: .\kernel\build\normal\boot-uefi-256.log
+PASS: divide, BIOS, vector 0, error 0. Log: .\kernel\build\fault-divide\exception-bios-128.log
+PASS: divide, UEFI, vector 0, error 0. Log: .\kernel\build\fault-divide\exception-uefi-256.log
+PASS: invalid-opcode, BIOS, vector 6, error 0. Log: .\kernel\build\fault-invalid-opcode\exception-bios-128.log
+PASS: invalid-opcode, UEFI, vector 6, error 0. Log: .\kernel\build\fault-invalid-opcode\exception-uefi-256.log
+PASS: general-protection, BIOS, vector 13, error 40. Log: .\kernel\build\fault-general-protection\exception-bios-128.log
+PASS: general-protection, UEFI, vector 13, error 40. Log: .\kernel\build\fault-general-protection\exception-uefi-256.log
+PASS: page-fault, BIOS, vector 14, error 0. Log: .\kernel\build\fault-page-fault\exception-bios-128.log
+PASS: page-fault, UEFI, vector 14, error 0. Log: .\kernel\build\fault-page-fault\exception-uefi-256.log
+PASS: double-fault, BIOS, vector 8, error 0. Log: .\kernel\build\fault-double-fault\exception-bios-128.log
+PASS: double-fault, UEFI, vector 8, error 0. Log: .\kernel\build\fault-double-fault\exception-uefi-256.log
+PASS: write-protect, BIOS, vector 14, error 3. Log: .\kernel\build\fault-write-protect\exception-bios-128.log
+PASS: write-protect, UEFI, vector 14, error 3. Log: .\kernel\build\fault-write-protect\exception-uefi-256.log
+PASS: no-execute, BIOS, vector 14, error 17. Log: .\kernel\build\fault-no-execute\exception-bios-128.log
+PASS: no-execute, UEFI, vector 14, error 17. Log: .\kernel\build\fault-no-execute\exception-uefi-256.log
+PASS: stack-guard, BIOS, vector 14, error 0. Log: .\kernel\build\fault-stack-guard\exception-bios-128.log
+PASS: stack-guard, UEFI, vector 14, error 0. Log: .\kernel\build\fault-stack-guard\exception-uefi-256.log
+PASS: unmapped, BIOS, vector 14, error 0. Log: .\kernel\build\fault-unmapped\exception-bios-128.log
+PASS: unmapped, UEFI, vector 14, error 0. Log: .\kernel\build\fault-unmapped\exception-uefi-256.log
+PASS: text-write, BIOS, vector 14, error 3. Log: .\kernel\build\fault-text-write\exception-bios-128.log
+PASS: text-write, UEFI, vector 14, error 3. Log: .\kernel\build\fault-text-write\exception-uefi-256.log
+PASS: stack-overflow, BIOS, vector 8, error 0. Log: .\kernel\build\fault-stack-overflow\exception-bios-128.log
+PASS: stack-overflow, UEFI, vector 8, error 0. Log: .\kernel\build\fault-stack-overflow\exception-uefi-256.log
+PASS: memory test, BIOS, 32 MiB. Log: .\kernel\build\memory\memory-bios-32.log
+PASS: memory test, BIOS, 128 MiB. Log: .\kernel\build\memory\memory-bios-128.log
+PASS: memory test, UEFI, 256 MiB. Log: .\kernel\build\memory\memory-uefi-256.log
+PASS: virtual memory test, BIOS, 32 MiB. Log: .\kernel\build\virtual\virtual-bios-32.log
+PASS: virtual memory test, BIOS, 128 MiB. Log: .\kernel\build\virtual\virtual-bios-128.log
+PASS: virtual memory test, UEFI, 256 MiB. Log: .\kernel\build\virtual\virtual-uefi-256.log
+PASS: timer test, BIOS, 32 MiB. Log: .\kernel\build\timer\timer-bios-32.log
+PASS: timer test, BIOS, 128 MiB. Log: .\kernel\build\timer\timer-bios-128.log
+PASS: timer test, UEFI, 256 MiB. Log: .\kernel\build\timer\timer-uefi-256.log
+PASS: console, BIOS, 32 MiB; commands, editing, recovery, paste, IRQ4 (1118 IRQs/1130 bytes), halt. Log: .\kernel\build\normal\console-bios-32.log
+PASS: console, BIOS, 128 MiB; commands, editing, recovery, paste, IRQ4 (1115 IRQs/1130 bytes), halt. Log: .\kernel\build\normal\console-bios-128.log
+PASS: console, UEFI, 256 MiB; commands, editing, recovery, paste, IRQ4 (1110 IRQs/1130 bytes), halt. Log: .\kernel\build\normal\console-uefi-256.log
+PASS: screen normal, BIOS, 128 MiB; .\kernel\build\normal\screen-bios-128-normal
+PASS: screen normal, UEFI, 256 MiB; .\kernel\build\normal\screen-uefi-256-normal
+PASS: screen no-serial, BIOS, 128 MiB; .\kernel\build\normal\screen-bios-128-no-serial
+PASS: screen no-serial, UEFI, 256 MiB; .\kernel\build\normal\screen-uefi-256-no-serial
+PASS: screen no-video, BIOS, 128 MiB; .\kernel\build\normal\screen-bios-128-no-video
+PASS: screen no-input, BIOS, 128 MiB; .\kernel\build\normal\screen-bios-128-no-input
+PASS: keyboard normal, BIOS, 128 MiB; .\kernel\build\normal\keyboard-bios-128-normal
+PASS: keyboard normal, UEFI, 256 MiB; .\kernel\build\normal\keyboard-uefi-256-normal
+PASS: keyboard no-serial, BIOS, 128 MiB; .\kernel\build\normal\keyboard-bios-128-no-serial
+PASS: keyboard no-serial, UEFI, 256 MiB; .\kernel\build\normal\keyboard-uefi-256-no-serial
+PASS: keyboard no-keyboard, BIOS, 128 MiB; .\kernel\build\normal\keyboard-bios-128-no-keyboard
+PASS: game normal, BIOS, 128 MiB; .\kernel\build\normal\game-bios-128-normal
+PASS: game normal, UEFI, 256 MiB; .\kernel\build\normal\game-uefi-256-normal
+PASS: game no-serial, BIOS, 128 MiB; .\kernel\build\normal\game-bios-128-no-serial
+PASS: game no-video, BIOS, 128 MiB; .\kernel\build\normal\game-bios-128-no-video
+PASS: slots normal, BIOS, 128 MiB; .\kernel\build\normal\slots-bios-128-normal
+PASS: slots normal, UEFI, 256 MiB; .\kernel\build\normal\slots-uefi-256-normal
+PASS: slots no-serial, BIOS, 128 MiB; .\kernel\build\normal\slots-bios-128-no-serial
+PASS: slots no-video, BIOS, 128 MiB; .\kernel\build\normal\slots-bios-128-no-video
+PASS: USB xHCI, no PS/2, BIOS, serial; .\kernel\build\normal\usb-bios-128-serial
+PASS: USB xHCI, no PS/2, UEFI, serial; .\kernel\build\normal\usb-uefi-256-serial
+PASS: USB xHCI, no PS/2, BIOS, screen; .\kernel\build\normal\usb-bios-128-screen
+PASS: USB xHCI, no PS/2, UEFI, screen; .\kernel\build\normal\usb-uefi-256-screen
+PASS: USB empty controller, serial fallback; .\kernel\build\normal\usb-topology-empty
+PASS: USB multiple controllers, mouse/hub skipped; .\kernel\build\normal\usb-topology-mixed
+PASS: 30 host groups, 4 boot, 22 exception, 3 PMM, 3 VMM, 3 timer, 3 console, 6 screen, 5 keyboard, 4 Snake, 4 slots and 6 USB checks (63 QEMU runs).

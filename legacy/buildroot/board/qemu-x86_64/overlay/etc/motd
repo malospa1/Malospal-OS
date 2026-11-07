@@ -1,0 +1,5 @@
+Welcome to MyOS 0.1.
+
+Development image: local root console, no password.
+Run myos-info for system information, poweroff to shut down.
+QEMU discards changes when this session ends.

@@ -1,0 +1,5 @@
+config BR2_PACKAGE_MYOS_BASE
+	bool "myos-base"
+	depends on BR2_INIT_BUSYBOX
+	help
+	  MyOS system information command and boot readiness check.
